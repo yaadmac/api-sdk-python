@@ -1,0 +1,8 @@
+setup.cfg
+api_sdk_python.egg-info/PKG-INFO
+api_sdk_python.egg-info/SOURCES.txt
+api_sdk_python.egg-info/dependency_links.txt
+api_sdk_python.egg-info/requires.txt
+api_sdk_python.egg-info/top_level.txt
+banregioapi/__init__.py
+banregioapi/banregio_token_helper.py
