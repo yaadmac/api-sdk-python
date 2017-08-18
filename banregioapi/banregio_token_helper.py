@@ -7,7 +7,6 @@ PROCESS_REFRESH_TOKEN_ERROR = "Refresh token is not present. You are sure to get
 class BanregioTokenHelper():
 
     def __init__(self,client_id,secret_key,redirect_uri=None,base_uri='https://api.banregio.com'):
-        print "Banregio Token Helper..."
         self.redirect_uri = redirect_uri
         self.base_uri = base_uri
         self.refresh_token = None

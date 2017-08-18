@@ -1,5 +1,6 @@
 peppercorn
 rauth
+requests
 
 [test]
 coverage
