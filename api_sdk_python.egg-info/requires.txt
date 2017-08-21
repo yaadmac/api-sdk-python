@@ -1,9 +1,0 @@
-peppercorn
-rauth
-requests
-
-[test]
-coverage
-
-[dev]
-check-manifest
