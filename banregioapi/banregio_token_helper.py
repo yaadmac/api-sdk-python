@@ -46,6 +46,21 @@ class BanregioTokenHelper():
         else:
             raise StandardError(PROCESS_REFRESH_TOKEN_ERROR)
 
+    def get_access_token_with_client_credentials(self):
+
+        response = self._build_raw_access_token_request(grant_type='client_credentials')
+
+        try:
+
+            self.access_token = response.json()['access_token']
+            return self.access_token
+
+        except KeyError as e:
+            raise KeyError(PROCESS_TOKEN_ERROR.format(raw=response.content))
+        except Exception as e:
+            print e.message    
+
+
     def get_access_token_with_refresh_token(self,refresh_token):
         response = self._build_raw_access_token_request(
                 grant_type = 'refresh_token',
@@ -74,6 +89,9 @@ class BanregioTokenHelper():
         if refresh_token and grant_type == 'refresh_token':
             data['refresh_token'] = refresh_token
             data['grant_type'] = grant_type
+
+        if grant_type == 'client_credentials':
+            data['grant_type'] = grant_type    
 
         return self.api.get_raw_access_token(data=data)  
 
