@@ -1,4 +1,6 @@
-from utils.service import Service  
+
+from banregioapi.utils.service import Service
+
 
 class BanregioApiHelper(Service):
 

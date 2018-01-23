@@ -14,3 +14,11 @@ __pycache__/
 # due to using tox and pytest
 .tox
 .cache
+
+# ignore venv artifacts
+lib/
+lib64
+bin/
+include/
+share/
+pyvenv.cfg

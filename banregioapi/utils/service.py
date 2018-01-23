@@ -1,7 +1,13 @@
 import requests
-import urlparse
 
-from urllib import urlencode
+try:
+    # Python 3
+    from urllib.parse import urlparse, parse_qsl, urlunparse, urlencode
+except ImportError:
+    # Python 2
+    from urlparse import urlparse, parse_qsl, urlunparse
+    from urllib import urlencode
+
 
 class Service():
     
@@ -44,9 +50,9 @@ class Service():
 
     def _update_url_params(self,url,params):
 
-        url_parts = list(urlparse.urlparse(url))
-        query = dict(urlparse.parse_qsl(url_parts[4]))
+        url_parts = list(urlparse(url))
+        query = dict(parse_qsl(url_parts[4]))
         query.update(params)
         url_parts[4] = urlencode(query)
 
-        return urlparse.urlunparse(url_parts)  
+        return urlunparse(url_parts)
