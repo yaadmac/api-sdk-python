@@ -58,7 +58,7 @@ class BanregioTokenHelper():
         except KeyError as e:
             raise KeyError(PROCESS_TOKEN_ERROR.format(raw=response.content))
         except Exception as e:
-            print e.message    
+            print(e.message)
 
 
     def get_access_token_with_refresh_token(self,refresh_token):
