@@ -13,7 +13,7 @@ Install from PyPi using pip, a package manager for Python.
 
 
 ```
-pip install api-sdk-python
+pip install banregio-api
 ```
 
 Don't have pip installed? Try installing it, by running this from the command line:

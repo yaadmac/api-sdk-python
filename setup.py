@@ -1,6 +1,6 @@
 """
 See:
-https://github.com/adrian-zumbler/api-sdk-python
+https://github.com/banregiolabs/api-sdk-python
 https://api.banregio.com/
 """
 
@@ -12,7 +12,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='api-sdk-python',
+    name='banregio-api',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -22,11 +22,11 @@ setup(
     description='wrapper to api banregio',
 
     # The project's main homepage.
-    url='https://github.com/adrian-zumbler/api-sdk-python',
+    url='https://github.com/banregiolabs/api-sdk-python',
 
     # Author details
-    author='Adrian Meza Maldonado',
-    author_email='adrian.meza@banregiolabs.com',
+    author='Adrian Meza Maldonado, Daniel Martinez Torres',
+    author_email='adrian.meza@banregiolabs.com, daniel.martinez@banregiolabs.com',
 
     # Choose your license
     license='MIT',
