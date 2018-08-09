@@ -9,22 +9,34 @@ You can find awesome documentation for Api Banregio REST API [here](https://api.
 
 ## Installation
 
-Install from PyPi using pip, a package manager for Python.
+Install using Gradle, 
 
 
 ```
-pip install banregio-api
-```
+repositories {   
 
-Don't have pip installed? Try installing it, by running this from the command line:
+    mavenCentral() flatDir {   
 
-```
-$ curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+        dirs 'libs'   
+
+    }   
+
+}   
+
+dependencies {   
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])  
+
+    compile 'com.android.support:appcompat-v7:26.1.0'   
+
+    compile project(path: ':BBPos-Core')   
+
+}
 ```
 
 ## Getting Started
 
-Getting started with the Banregio API couldn't be easier. Create a Token Helper and you're ready to go.
+Getting started with the BBPOS API couldn't be easier.
 
 ### Oauth2 Helper
 
